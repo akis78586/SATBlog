@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Los Tuxtlas Veracruz</title>
+    <meta name="description" content="Descubre Los Tuxtlas, Veracruz. Guía completa de Santiago Tuxtla, San Andrés Tuxtla y Catemaco.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Barra de progreso de lectura -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Selector de Idioma Flotante -->
+    <div class="lang-switcher" id="langSwitcher">
+        <button class="lang-btn active" data-lang="es" title="Español">
+            <span class="flag">🇲🇽</span> ES
+        </button>
+        <button class="lang-btn" data-lang="en" title="English">
+            <span class="flag">🇺🇸</span> EN
+        </button>
+    </div>
+
+    <!-- Navegación -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#inicio" class="logo">
+                <i class="fas fa-leaf"></i>
+                <span>Los Tuxtlas<small data-i18n="logo.sub">Veracruz</small></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#destinos" class="nav-link" data-i18n="nav.destinos">Destinos</a></li>
+                <li><a href="#experiencias" class="nav-link" data-i18n="nav.experiencias">Experiencias</a></li>
+                <li><a href="#gastronomia" class="nav-link" data-i18n="nav.gastronomia">Gastronomía</a></li>
+                <li><a href="#cultura" class="nav-link" data-i18n="nav.cultura">Cultura</a></li>
+                <li><a href="#galeria" class="nav-link" data-i18n="nav.galeria">Galería</a></li>
+                <li><a href="#planificador" class="nav-link cta-nav" data-i18n="nav.cta">Planifica tu Viaje</a></li>
+            </ul>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO CON SLIDER DE IMÁGENES AUTOMÁTICO -->
+    <header id="inicio" class="hero">
+        <div class="slider">
+            <div class="slide active" style="background-image: url('imagenes/img1.jpg');">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide" style="background-image: url('imagenes/img2.jpg');">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide" style="background-image: url('imagenes/img3.jpg');">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide" style="background-image: url('imagenes/img6.jpeg');">
+                <div class="slide-overlay"></div>
+            </div>
+        </div>
+
+        <div class="hero-overlay"></div>
+        <div class="particles" id="particles"></div>
+
+        <div class="hero-content">
+            <span class="hero-subtitle" data-i18n="hero.subtitle">Bienvenido a la Suiza Veracruzana</span>
+            <h1 class="hero-title">
+                <span class="title-line" data-i18n="hero.title.line1">Los Tuxtlas</span>
+                <span class="title-line accent" data-i18n="hero.title.line2">Mágicos</span>
+            </h1>
+            <p class="hero-desc" data-i18n="hero.desc">
+                Selva, magia y tradición en un solo lugar. Descubre Santiago Tuxtla, San Andrés y Catemaco.
+            </p>
+            <div class="hero-buttons">
+                <a href="#destinos" class="btn btn-primary">
+                    <i class="fas fa-compass"></i>
+                    <span data-i18n="hero.btn1">Explorar Destinos</span>
+                </a>
+                <a href="#planificador" class="btn btn-glass">
+                    <i class="fas fa-calendar-alt"></i>
+                    <span data-i18n="hero.btn2">Planificar Viaje</span>
+                </a>
+            </div>
+
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">3</span>
+                    <span class="stat-label" data-i18n="hero.stat1">Pueblos Mágicos</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">+50</span>
+                    <span class="stat-label" data-i18n="hero.stat2">Sitios Naturales</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">365</span>
+                    <span class="stat-label" data-i18n="hero.stat3">Días de Aventura</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Marquee de Bienvenida -->
+    <div class="marquee">
+        <div class="marquee-content">
+            <span><i class="fas fa-star"></i> <span data-i18n="marquee.1">Cascadas Escondidas</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="marquee.2">Selva Tropical</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="marquee.3">Lagunas Místicas</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="marquee.4">Tradición Olmeca</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="marquee.5">Café de Altura</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="marquee.6">Gastronomía Única</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="marquee.1">Cascadas Escondidas</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="marquee.2">Selva Tropical</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="marquee.3">Lagunas Místicas</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="marquee.4">Tradición Olmeca</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="marquee.5">Café de Altura</span></span>
+            <span><i class="fas fa-star"></i> <span data-i18n="marquee.6">Gastronomía Única</span></span>
+        </div>
+    </div>
+
+    <!-- SECCIÓN DESTINOS -->
+    <section id="destinos" class="section section-destinos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="destinos.tag">Explora</span>
+                <h2 class="section-title" data-i18n="destinos.title">Tres Mundos, Una Región</h2>
+                <p class="section-subtitle" data-i18n="destinos.subtitle">Cada rincón de Los Tuxtlas guarda una historia única.</p>
+            </div>
+            
+            <div class="destinos-grid">
+                <article class="destino-card large" data-destino="santiago">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=1000');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <span class="card-tag" data-i18n="destinos.santiago.tag">Historia</span>
+                        <h3 data-i18n="destinos.santiago.name">Santiago Tuxtla</h3>
+                        <p data-i18n="destinos.santiago.desc">La cuna de la civilización Olmeca. Siente el peso de la historia frente a las cabezas colosales.</p>
+                        <button class="btn-card" onclick="mostrarInfo('santiago')">
+                            <span data-i18n="destinos.btn">Descubrir más</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="destino-card" data-destino="sanandres">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=1000');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <span class="card-tag" data-i18n="destinos.sanandres.tag">Naturaleza</span>
+                        <h3 data-i18n="destinos.sanandres.name">San Andrés Tuxtla</h3>
+                        <p data-i18n="destinos.sanandres.desc">Cascadas, tabaco y selva. El pulmón verde de Veracruz.</p>
+                        <button class="btn-card" onclick="mostrarInfo('sanandres')">
+                            <span data-i18n="destinos.btn">Descubrir más</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+
+                <article class="destino-card" data-destino="catemaco">
+                    <div class="card-image" style="background-image: url('https://images.unsplash.com/photo-1439066615861-d1af74d74000?q=80&w=1000');"></div>
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <span class="card-tag" data-i18n="destinos.catemaco.tag">Magia</span>
+                        <h3 data-i18n="destinos.catemaco.name">Catemaco</h3>
+                        <p data-i18n="destinos.catemaco.desc">La laguna encantada. Brujos, monos y aguas termales.</p>
+                        <button class="btn-card" onclick="mostrarInfo('catemaco')">
+                            <span data-i18n="destinos.btn">Descubrir más</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN EXPERIENCIAS -->
+    <section id="experiencias" class="section section-experiencias">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="exp.tag">Vive</span>
+                <h2 class="section-title" data-i18n="exp.title">Experiencias Inolvidables</h2>
+                <p class="section-subtitle" data-i18n="exp.subtitle">Aventuras que se convierten en historias para contar.</p>
+            </div>
+            <div class="experiencias-grid">
+                <div class="exp-item fade-in-scroll">
+                    <div class="exp-icon"><i class="fas fa-water"></i></div>
+                    <h4 data-i18n="exp.1.title">Paseo en Lancha</h4>
+                    <p data-i18n="exp.1.desc">Navega por la Laguna de Catemaco y visita la Isla de los Monos.</p>
+                </div>
+                <div class="exp-item fade-in-scroll">
+                    <div class="exp-icon"><i class="fas fa-mountain"></i></div>
+                    <h4 data-i18n="exp.2.title">Senderismo</h4>
+                    <p data-i18n="exp.2.desc">Recorre la Reserva de la Biosfera y descubre cascadas ocultas.</p>
+                </div>
+                <div class="exp-item fade-in-scroll">
+                    <div class="exp-icon"><i class="fas fa-hat-wizard"></i></div>
+                    <h4 data-i18n="exp.3.title">Rituales Ancestrales</h4>
+                    <p data-i18n="exp.3.desc">Sumérgete en la tradición de los brujos de Catemaco.</p>
+                </div>
+                <div class="exp-item fade-in-scroll">
+                    <div class="exp-icon"><i class="fas fa-mug-hot"></i></div>
+                    <h4 data-i18n="exp.4.title">Ruta del Café</h4>
+                    <p data-i18n="exp.4.desc">Conoce el proceso del café de altura en San Andrés.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN GASTRONOMÍA -->
+    <section id="gastronomia" class="section section-gastronomia">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="gastro.tag">Saborea</span>
+                <h2 class="section-title" data-i18n="gastro.title">Gastronomía Local</h2>
+                <p class="section-subtitle" data-i18n="gastro.subtitle">Sabores que cuentan historias de la selva y el mar.</p>
+            </div>
+            <div class="gastro-grid">
+                <div class="gastro-card fade-in-scroll">
+                    <div class="gastro-img" style="background-image: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=600');">
+                        <span class="gastro-badge" data-i18n="gastro.1.badge">Imperdible</span>
+                    </div>
+                    <h4 data-i18n="gastro.1.title">Pescado Frito</h4>
+                    <p data-i18n="gastro.1.desc">Fresco de la laguna, crujiente y lleno de sabor.</p>
+                </div>
+                <div class="gastro-card fade-in-scroll">
+                    <div class="gastro-img" style="background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=600');">
+                        <span class="gastro-badge" data-i18n="gastro.2.badge">Tradicional</span>
+                    </div>
+                    <h4 data-i18n="gastro.2.title">Tamales de Chipilín</h4>
+                    <p data-i18n="gastro.2.desc">El desayuno tradicional por excelencia.</p>
+                </div>
+                <div class="gastro-card fade-in-scroll">
+                    <div class="gastro-img" style="background-image: url('https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?q=80&w=600');">
+                        <span class="gastro-badge" data-i18n="gastro.3.badge">Premium</span>
+                    </div>
+                    <h4 data-i18n="gastro.3.title">Café de Altura</h4>
+                    <p data-i18n="gastro.3.desc">Aroma y cuerpo de las montañas tuxtlecas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN CULTURA -->
+    <section id="cultura" class="section section-cultura">
+        <div class="container cultura-container">
+            <div class="cultura-text">
+                <span class="section-tag" data-i18n="cultura.tag">Tradición</span>
+                <h2 class="section-title" style="text-align: left;" data-i18n="cultura.title">Cultura Viva</h2>
+                <p data-i18n="cultura.desc">Los Tuxtlas no es solo un destino natural; es un crisol de culturas. Desde la herencia Olmeca en Santiago hasta la mística de los brujos en Catemaco, cada pueblo tiene su propio latido.</p>
+                <ul class="cultura-list">
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="cultura.item1">Zona Arqueológica de Tres Zapotes</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="cultura.item2">Fiesta de la Candelaria</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="cultura.item3">Artesanías en barro y madera</span></li>
+                    <li><i class="fas fa-check-circle"></i> <span data-i18n="cultura.item4">Danza de los Tocotines</span></li>
+                </ul>
+                <a href="#planificador" class="btn btn-primary" style="margin-top: 2rem;">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span data-i18n="cultura.cta">Descubre más</span>
+                </a>
+            </div>
+            <div class="cultura-image" style="background-image: url('https://images.unsplash.com/photo-1518638150340-f706e86654de?q=80&w=800');"></div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN GALERÍA -->
+    <section id="galeria" class="section section-galeria">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag" data-i18n="galeria.tag">Visualiza</span>
+                <h2 class="section-title" data-i18n="galeria.title">Galería Visual</h2>
+                <p class="section-subtitle" data-i18n="galeria.subtitle">Postales que te enamorarán de Los Tuxtlas.</p>
+            </div>
+            <div class="galeria-grid" id="galeriaGrid"></div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN PLANIFICADOR -->
+    <section id="planificador" class="section section-planificador">
+        <div class="container">
+            <div class="planificador-box">
+                <div class="planificador-info">
+                    <span class="section-tag" data-i18n="plan.tag">Comienza</span>
+                    <h2 data-i18n="plan.title">¿Listo para la aventura?</h2>
+                    <p data-i18n="plan.desc">Déjanos tus datos y te enviaremos una guía personalizada con los mejores lugares, rutas y consejos para tu viaje a Los Tuxtlas.</p>
+                    <div class="info-contacto">
+                        <div><i class="fas fa-envelope"></i> hola@lostuxtlas.travel</div>
+                        <div><i class="fas fa-phone"></i> +52 294 123 4567</div>
+                        <div><i class="fas fa-map-marker-alt"></i> <span data-i18n="plan.location">Los Tuxtlas, Veracruz, México</span></div>
+                    </div>
+                </div>
+                <form class="planificador-form" id="formPlan">
+                    <div class="input-group">
+                        <input type="text" placeholder="Tu Nombre" data-i18n-placeholder="plan.name" required>
+                    </div>
+                    <div class="input-group">
+                        <input type="email" placeholder="Tu Correo" data-i18n-placeholder="plan.email" required>
+                    </div>
+                    <div class="input-group">
+                        <select required>
+                            <option value="" data-i18n="plan.select">¿Qué te interesa más?</option>
+                            <option value="naturaleza" data-i18n="plan.opt1">Naturaleza y Aventura</option>
+                            <option value="cultura" data-i18n="plan.opt2">Cultura e Historia</option>
+                            <option value="gastronomia" data-i18n="plan.opt3">Gastronomía</option>
+                            <option value="relax" data-i18n="plan.opt4">Relax y Bienestar</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">
+                        <i class="fas fa-paper-plane"></i>
+                        <span data-i18n="plan.btn">Enviar Guía de Viaje</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3>Los Tuxtlas</h3>
+                <p data-i18n="footer.brand">Tu guía definitiva para explorar la magia de Veracruz.</p>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer.explore">Explorar</h4>
+                <a href="#destinos" data-i18n="nav.destinos">Destinos</a>
+                <a href="#experiencias" data-i18n="nav.experiencias">Experiencias</a>
+                <a href="#gastronomia" data-i18n="nav.gastronomia">Gastronomía</a>
+            </div>
+            <div class="footer-links">
+                <h4 data-i18n="footer.legal">Legal</h4>
+                <a href="#" data-i18n="footer.privacy">Aviso de Privacidad</a>
+                <a href="#" data-i18n="footer.terms">Términos y Condiciones</a>
+                <a href="#planificador" data-i18n="footer.contact">Contacto</a>
+            </div>
+            <div class="footer-social">
+                <h4 data-i18n="footer.follow">Síguenos</h4>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="footer.copy">© 2026 Los Tuxtlas Travel Guide. Hecho con pasión en Veracruz.</p>
+        </div>
+    </footer>
+
+    <!-- Modal para destinos -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="cerrarModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <!-- Botón flotante "back to top" -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
